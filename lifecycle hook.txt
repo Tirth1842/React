@@ -1,0 +1,24 @@
+React Component lifecycle
+
+
+1.constructor(props)
+	- Do: set up state
+	- Dont:  cause side-effects
+
+2.getDerivedStateFromProps(props,state)
+	-Do: sync state
+	- Dont: cause side effects(dont send http request)
+   - to change the internal components of the state
+
+3. render()
+	- return JSX
+	-dont send http request
+ 3.1.
+	child render calls if any present in the render.
+
+4.  componentDidMount()
+	- use for http request.
+	-dont call setstate here.(dont update state)
+
+
+	

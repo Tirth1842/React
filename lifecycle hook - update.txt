@@ -1,0 +1,21 @@
+Component Lifecycle - Update
+
+1. getDerivedStateFromProps(props, state)
+	- sync state to props
+	- dont cause side effects(no http request)
+
+2.  shouldComponentUpdate(nextProps, nextstate)
+	- decide whether to continue or not
+	- cause side-effects
+
+3. render()
+	- constructs virtual DOM
+	- render JSX
+
+4. getSnapshotBeforeUpdate(prevProps, prevState)
+	- last minute DOM operation
+	- dont cause side-effects
+
+5. componentDidUpdate()
+	- cause side-effects 
+	- Update state (triggers re-render)
